@@ -8,3 +8,5 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 );
+
+(window as any).__QUICKCARE_MOUNTED__ = true;
