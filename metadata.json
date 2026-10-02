@@ -1,0 +1,8 @@
+{
+  "name": "QuickCare – Smart Hospital Queue Management System",
+  "description": "Smart hospital queue management system with real-time digital token tracking, doctor consultation management, and multi-role administrative dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

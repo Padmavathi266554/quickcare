@@ -1,0 +1,480 @@
+{
+  "users": [
+    {
+      "_id": "user-admin",
+      "name": "Dr. Aris Thorne (Admin)",
+      "email": "admin@quickcare.com",
+      "password": "$2b$10$TzAbTXaN4WxVWf.IdxuDbOsfFlKfb/zruTWaDNo1no/P7x1uFFJ.q",
+      "role": "admin",
+      "phone": "+1 (555) 019-2834",
+      "createdAt": "2026-09-29T13:54:35.348Z"
+    },
+    {
+      "_id": "user-doc-1",
+      "name": "Dr. Ramesh Chandra",
+      "email": "ramesh@quickcare.com",
+      "password": "$2b$10$RehAUFw6ocMBHoAHbqkuJOGuh4kAH9pqo.hO/VU08XOXwGrFd2jy6",
+      "role": "doctor",
+      "phone": "+1 (555) 014-9921",
+      "createdAt": "2026-09-29T13:54:35.349Z"
+    },
+    {
+      "_id": "user-doc-2",
+      "name": "Dr. Priya Sharma",
+      "email": "priya@quickcare.com",
+      "password": "$2b$10$L2SbQtktPagGIcT5NPtgtebtCHiOzZvm83ii1rjZwvbgQ.Lpm91Jm",
+      "role": "doctor",
+      "phone": "+1 (555) 014-8842",
+      "createdAt": "2026-09-29T13:54:35.349Z"
+    },
+    {
+      "_id": "user-patient-1",
+      "name": "Ravi Kumar",
+      "email": "ravi@gmail.com",
+      "password": "$2b$10$xeRi5tb1r2t0V.PBV57HRuoJyX3P857Kz5gNCvu2QdtseSrcLYi5.",
+      "role": "patient",
+      "phone": "+1 (555) 482-1920",
+      "createdAt": "2026-09-29T13:54:35.349Z"
+    },
+    {
+      "_id": "user-patient-2",
+      "name": "Anita Verma",
+      "email": "anita@gmail.com",
+      "password": "$2b$10$RyAD5aGuRBkcqoSHMVv2pueopWyz1VSHJjTFKDwU2g5QOty100ZP2",
+      "role": "patient",
+      "phone": "+1 (555) 293-8471",
+      "createdAt": "2026-09-29T13:54:35.349Z"
+    }
+  ],
+  "patients": [
+    {
+      "_id": "pat-1",
+      "userId": "user-patient-1",
+      "name": "Ravi Kumar",
+      "age": 34,
+      "gender": "Male",
+      "phone": "+1 (555) 482-1920",
+      "bloodGroup": "O+",
+      "emergencyContact": "+1 (555) 482-1921"
+    },
+    {
+      "_id": "pat-2",
+      "userId": "user-patient-2",
+      "name": "Anita Verma",
+      "age": 28,
+      "gender": "Female",
+      "phone": "+1 (555) 293-8471",
+      "bloodGroup": "B+",
+      "emergencyContact": "+1 (555) 293-8472"
+    },
+    {
+      "_id": "pat-3",
+      "userId": "user-patient-3",
+      "name": "Suresh Patel",
+      "age": 52,
+      "gender": "Male",
+      "phone": "+1 (555) 847-1902",
+      "bloodGroup": "A+"
+    },
+    {
+      "_id": "pat-4",
+      "userId": "user-patient-4",
+      "name": "Meena Singh",
+      "age": 41,
+      "gender": "Female",
+      "phone": "+1 (555) 392-8172",
+      "bloodGroup": "AB+"
+    },
+    {
+      "_id": "pat-5",
+      "userId": "user-patient-5",
+      "name": "Kavita Iyer",
+      "age": 29,
+      "gender": "Female",
+      "phone": "+1 (555) 921-7643",
+      "bloodGroup": "O-"
+    }
+  ],
+  "doctors": [
+    {
+      "_id": "doc-1",
+      "name": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "specialization": "Internal Medicine & Chronic Disease",
+      "roomNumber": "Room 101",
+      "availability": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "averageConsultationTime": 5,
+      "status": "In Consultation"
+    },
+    {
+      "_id": "doc-2",
+      "name": "Dr. Priya Sharma",
+      "department": "General Physician",
+      "specialization": "Family Medicine & Preventive Care",
+      "roomNumber": "Room 102",
+      "availability": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "averageConsultationTime": 6,
+      "status": "Available"
+    },
+    {
+      "_id": "doc-3",
+      "name": "Dr. Suresh Patel",
+      "department": "Cardiology",
+      "specialization": "Interventional Cardiologist",
+      "roomNumber": "Room 205",
+      "availability": [
+        "Mon",
+        "Wed",
+        "Fri"
+      ],
+      "averageConsultationTime": 15,
+      "status": "In Consultation"
+    },
+    {
+      "_id": "doc-4",
+      "name": "Dr. Vikram Seth",
+      "department": "Orthopedics",
+      "specialization": "Joint Replacement & Spine Specialist",
+      "roomNumber": "Room 304",
+      "availability": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ],
+      "averageConsultationTime": 10,
+      "status": "Available"
+    },
+    {
+      "_id": "doc-5",
+      "name": "Dr. Sunita Rao",
+      "department": "Pediatrics",
+      "specialization": "Neonatal & Child Health",
+      "roomNumber": "Room 110",
+      "availability": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Sat"
+      ],
+      "averageConsultationTime": 8,
+      "status": "Available"
+    }
+  ],
+  "departments": [
+    {
+      "_id": "dep-1",
+      "name": "General Physician",
+      "code": "GP",
+      "prefix": "A",
+      "description": "Routine checkups, seasonal illness, acute diagnosis & adult medicine",
+      "iconName": "Stethoscope",
+      "averageConsultationTime": 5,
+      "headDoctor": "Dr. Ramesh Chandra",
+      "roomNumbers": [
+        "Room 101",
+        "Room 102"
+      ]
+    },
+    {
+      "_id": "dep-2",
+      "name": "Cardiology",
+      "code": "CARD",
+      "prefix": "B",
+      "description": "Heart disease diagnosis, hypertension care, ECG & cardiovascular health",
+      "iconName": "HeartPulse",
+      "averageConsultationTime": 15,
+      "headDoctor": "Dr. Anita Desai",
+      "roomNumbers": [
+        "Room 205",
+        "Room 206"
+      ]
+    },
+    {
+      "_id": "dep-3",
+      "name": "Orthopedics",
+      "code": "ORTH",
+      "prefix": "C",
+      "description": "Bone, joint, spine, sports injuries, fractures & rehabilitation",
+      "iconName": "Activity",
+      "averageConsultationTime": 10,
+      "headDoctor": "Dr. Vikram Seth",
+      "roomNumbers": [
+        "Room 304"
+      ]
+    },
+    {
+      "_id": "dep-4",
+      "name": "Pediatrics",
+      "code": "PED",
+      "prefix": "D",
+      "description": "Comprehensive infant, child, and adolescent healthcare & immunizations",
+      "iconName": "Baby",
+      "averageConsultationTime": 8,
+      "headDoctor": "Dr. Sunita Rao",
+      "roomNumbers": [
+        "Room 110"
+      ]
+    }
+  ],
+  "appointments": [
+    {
+      "_id": "apt-100",
+      "patientId": "pat-mock-1",
+      "patientName": "Kishore Dave",
+      "patientPhone": "+1 (555) 100-2918",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "date": "2026-09-29",
+      "time": "09:00 AM",
+      "tokenNumber": "A100",
+      "status": "completed",
+      "estimatedWaitTime": 0,
+      "createdAt": "2026-09-29T10:54:35.349Z"
+    },
+    {
+      "_id": "apt-101",
+      "patientId": "pat-mock-2",
+      "patientName": "Devika Menon",
+      "patientPhone": "+1 (555) 101-4491",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "date": "2026-09-29",
+      "time": "09:30 AM",
+      "tokenNumber": "A101",
+      "status": "completed",
+      "estimatedWaitTime": 0,
+      "createdAt": "2026-09-29T11:54:35.349Z"
+    },
+    {
+      "_id": "apt-102",
+      "patientId": "pat-1",
+      "patientName": "Ravi Kumar",
+      "patientPhone": "+1 (555) 482-1920",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "date": "2026-09-29",
+      "time": "10:00 AM",
+      "tokenNumber": "A102",
+      "status": "ongoing",
+      "estimatedWaitTime": 0,
+      "createdAt": "2026-09-29T12:54:35.349Z",
+      "notes": "Mild fever and recurrent headache since past 2 days."
+    },
+    {
+      "_id": "apt-103",
+      "patientId": "pat-2",
+      "patientName": "Anita Verma",
+      "patientPhone": "+1 (555) 293-8471",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "date": "2026-09-29",
+      "time": "10:15 AM",
+      "tokenNumber": "A103",
+      "status": "upcoming",
+      "estimatedWaitTime": 5,
+      "createdAt": "2026-09-29T13:24:35.349Z"
+    },
+    {
+      "_id": "apt-104",
+      "patientId": "pat-5",
+      "patientName": "Kavita Iyer",
+      "patientPhone": "+1 (555) 921-7643",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "date": "2026-09-29",
+      "time": "10:30 AM",
+      "tokenNumber": "A104",
+      "status": "upcoming",
+      "estimatedWaitTime": 10,
+      "createdAt": "2026-09-29T13:34:35.349Z"
+    },
+    {
+      "_id": "apt-201",
+      "patientId": "pat-3",
+      "patientName": "Suresh Patel",
+      "patientPhone": "+1 (555) 847-1902",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Suresh Patel",
+      "department": "Cardiology",
+      "date": "2026-09-29",
+      "time": "11:00 AM",
+      "tokenNumber": "B201",
+      "status": "ongoing",
+      "estimatedWaitTime": 0,
+      "createdAt": "2026-09-29T13:14:35.349Z"
+    },
+    {
+      "_id": "apt-202",
+      "patientId": "pat-4",
+      "patientName": "Meena Singh",
+      "patientPhone": "+1 (555) 392-8172",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Suresh Patel",
+      "department": "Cardiology",
+      "date": "2026-09-29",
+      "time": "11:30 AM",
+      "tokenNumber": "B202",
+      "status": "upcoming",
+      "estimatedWaitTime": 15,
+      "createdAt": "2026-09-29T13:29:35.349Z"
+    }
+  ],
+  "queue": [
+    {
+      "_id": "q-100",
+      "tokenNumber": "A100",
+      "appointmentId": "apt-100",
+      "patientId": "pat-mock-1",
+      "patientName": "Kishore Dave",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "queuePosition": 0,
+      "status": "completed",
+      "estimatedWaitTime": 0,
+      "completedAt": "2026-09-29T11:54:35.349Z",
+      "createdAt": "2026-09-29T10:54:35.349Z"
+    },
+    {
+      "_id": "q-101",
+      "tokenNumber": "A101",
+      "appointmentId": "apt-101",
+      "patientId": "pat-mock-2",
+      "patientName": "Devika Menon",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "queuePosition": 0,
+      "status": "completed",
+      "estimatedWaitTime": 0,
+      "completedAt": "2026-09-29T12:54:35.349Z",
+      "createdAt": "2026-09-29T11:54:35.349Z"
+    },
+    {
+      "_id": "q-102",
+      "tokenNumber": "A102",
+      "appointmentId": "apt-102",
+      "patientId": "pat-1",
+      "patientName": "Ravi Kumar",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "queuePosition": 1,
+      "status": "current",
+      "estimatedWaitTime": 0,
+      "calledAt": "2026-09-29T13:49:35.349Z",
+      "createdAt": "2026-09-29T12:54:35.349Z"
+    },
+    {
+      "_id": "q-103",
+      "tokenNumber": "A103",
+      "appointmentId": "apt-103",
+      "patientId": "pat-2",
+      "patientName": "Anita Verma",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "queuePosition": 2,
+      "status": "next",
+      "estimatedWaitTime": 5,
+      "createdAt": "2026-09-29T13:24:35.349Z"
+    },
+    {
+      "_id": "q-104",
+      "tokenNumber": "A104",
+      "appointmentId": "apt-104",
+      "patientId": "pat-5",
+      "patientName": "Kavita Iyer",
+      "doctorId": "doc-1",
+      "doctorName": "Dr. Ramesh Chandra",
+      "department": "General Physician",
+      "queuePosition": 3,
+      "status": "waiting",
+      "estimatedWaitTime": 10,
+      "createdAt": "2026-09-29T13:34:35.349Z"
+    },
+    {
+      "_id": "q-201",
+      "tokenNumber": "B201",
+      "appointmentId": "apt-201",
+      "patientId": "pat-3",
+      "patientName": "Suresh Patel",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Suresh Patel",
+      "department": "Cardiology",
+      "queuePosition": 1,
+      "status": "current",
+      "estimatedWaitTime": 0,
+      "calledAt": "2026-09-29T13:44:35.349Z",
+      "createdAt": "2026-09-29T13:14:35.349Z"
+    },
+    {
+      "_id": "q-202",
+      "tokenNumber": "B202",
+      "appointmentId": "apt-202",
+      "patientId": "pat-4",
+      "patientName": "Meena Singh",
+      "doctorId": "doc-3",
+      "doctorName": "Dr. Suresh Patel",
+      "department": "Cardiology",
+      "queuePosition": 2,
+      "status": "next",
+      "estimatedWaitTime": 15,
+      "createdAt": "2026-09-29T13:29:35.349Z"
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "notif-1",
+      "userId": "user-patient-1",
+      "patientId": "pat-1",
+      "title": "Consultation In Progress",
+      "message": "Your token A102 is currently active in Room 101 with Dr. Ramesh Chandra.",
+      "type": "turn_now",
+      "read": false,
+      "tokenNumber": "A102",
+      "createdAt": "2026-09-29T13:49:35.349Z"
+    },
+    {
+      "_id": "notif-2",
+      "userId": "user-patient-2",
+      "patientId": "pat-2",
+      "title": "Your Turn is Approaching",
+      "message": "Token A103: There is only 1 patient ahead of you. Please proceed near Room 101.",
+      "type": "turn_approaching",
+      "read": false,
+      "tokenNumber": "A103",
+      "createdAt": "2026-09-29T13:50:35.349Z"
+    },
+    {
+      "_id": "notif-3",
+      "userId": "user-patient-1",
+      "patientId": "pat-1",
+      "title": "Appointment Booked",
+      "message": "Appointment confirmed for General Physician with Dr. Ramesh Chandra. Token: A102.",
+      "type": "booked",
+      "read": true,
+      "tokenNumber": "A102",
+      "createdAt": "2026-09-29T12:54:35.349Z"
+    }
+  ]
+}
