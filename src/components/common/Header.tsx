@@ -56,6 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   const currentRole = user?.role || 'patient';
+  const roleString: string = currentRole;
   const roleInfo = getRoleBadge(currentRole);
   const RoleIcon = roleInfo.icon;
 
@@ -79,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => switchRoleQuick('patient')}
               disabled={isLoading}
               className={`px-2.5 py-0.5 rounded text-xs font-semibold transition-all ${
-                currentRole === 'patient'
+                roleString === 'patient'
                   ? 'bg-emerald-500 text-white shadow-xs'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
@@ -91,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => switchRoleQuick('doctor')}
               disabled={isLoading}
               className={`px-2.5 py-0.5 rounded text-xs font-semibold transition-all ${
-                currentRole === 'doctor'
+                roleString === 'doctor'
                   ? 'bg-emerald-500 text-white shadow-xs'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
@@ -103,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => switchRoleQuick('admin')}
               disabled={isLoading}
               className={`px-2.5 py-0.5 rounded text-xs font-semibold transition-all ${
-                currentRole === 'admin'
+                roleString === 'admin'
                   ? 'bg-emerald-500 text-white shadow-xs'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
@@ -258,7 +259,7 @@ export const Header: React.FC<HeaderProps> = ({
                       className="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 flex items-center justify-between"
                     >
                       <span>{t('patientRavi', 'Patient (Ravi Kumar)')}</span>
-                      {currentRole === 'patient' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
+                      {roleString === 'patient' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
                     </button>
                     <button
                       onClick={() => {
@@ -268,7 +269,7 @@ export const Header: React.FC<HeaderProps> = ({
                       className="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 flex items-center justify-between"
                     >
                       <span>{t('doctorRamesh', 'Doctor (Dr. Ramesh)')}</span>
-                      {currentRole === 'doctor' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
+                      {roleString === 'doctor' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
                     </button>
                     <button
                       onClick={() => {
@@ -278,7 +279,7 @@ export const Header: React.FC<HeaderProps> = ({
                       className="w-full text-left px-3 py-1.5 text-xs text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 flex items-center justify-between"
                     >
                       <span>{t('hospitalAdmin', 'Hospital Admin')}</span>
-                      {currentRole === 'admin' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
+                      {roleString === 'admin' && <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>}
                     </button>
                   </div>
                 )}

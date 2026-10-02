@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { Header } from './components/common/Header';
 import { LoginPage } from './components/auth/LoginPage';
 import { SignUpPage } from './components/auth/SignUpPage';
@@ -135,10 +136,12 @@ function MainApp() {
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <AuthProvider>
-        <MainApp />
-      </AuthProvider>
-    </LanguageProvider>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <AuthProvider>
+          <MainApp />
+        </AuthProvider>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 }

@@ -9,13 +9,56 @@
     <meta property="og:description" content="Smart hospital queue management system with real-time digital token tracking, doctor consultation management, and multi-role administrative dashboards." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Trailing-slash normalization for GitHub Pages relative assets -->
+    <script type="text/javascript">
+      (function() {
+        var path = window.location.pathname;
+        if (path && !path.endsWith('/') && !path.split('/').pop().includes('.')) {
+          window.location.replace(path + '/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+
+    <!-- GitHub Pages Single Page Apps URL restoration (rafgraph/spa-github-pages) -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#F8FAFC] text-slate-900 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-emerald-100 selection:text-emerald-900">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Branded fallback placeholder while React app loads -->
+      <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #F8FAFC; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; color: #0F172A;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+          <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, #059669, #0284C7); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.35);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: #0F172A;">Quick<span style="color: #059669;">Care</span></div>
+            <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #64748B;">Hospital Queue System</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: #64748B;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #059669; transform: scale(1); animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;"></div>
+          <span>Loading hospital portal...</span>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

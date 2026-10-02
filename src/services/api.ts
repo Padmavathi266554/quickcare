@@ -33,23 +33,35 @@ async function callApiOrFallback<T>(
   try {
     const res = await apiCall();
     const contentType = res.headers.get('content-type') || '';
-    // If route doesn't exist on server (404) or returned HTML instead of JSON
-    if (res.status === 404 || (!contentType.includes('application/json') && res.status !== 200 && res.status !== 201)) {
+
+    // If route doesn't exist on server (404), returned HTML (static host serving 404 or index.html), or server error
+    if (!contentType.includes('application/json') || res.status === 404 || res.status >= 500) {
       return await fallbackFn();
     }
-    const data = await res.json();
+
+    let data: any;
+    try {
+      data = await res.json();
+    } catch {
+      // JSON parse error (e.g. HTML or empty body)
+      return await fallbackFn();
+    }
+
     if (!res.ok) {
+      // Specific application-level error from active backend API
       if (res.status === 401 || res.status === 403 || res.status === 400) {
-        throw new Error(data.error || 'Request failed');
+        throw new Error(data?.error || 'Request failed');
       }
       return await fallbackFn();
     }
     return data;
   } catch (err: any) {
-    if (err.message && (err.message.includes('Failed to fetch') || err.message.includes('NetworkError') || err.name === 'TypeError')) {
-      return await fallbackFn();
+    // If it's an explicit validation/auth error from an active API server, rethrow to show in form
+    if (err && err.message && (err.message === 'Request failed' || err.message.includes('Invalid') || err.message.includes('password') || err.message.includes('email') || err.message.includes('exist'))) {
+      throw err;
     }
-    throw err;
+    // Any network failure, TypeError, SyntaxError, or static hosting missing backend -> fallback gracefully
+    return await fallbackFn();
   }
 }
 

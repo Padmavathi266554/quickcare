@@ -213,7 +213,7 @@ export const AdminDashboard: React.FC = () => {
   const waitingPatients = queue.filter(item => item.status === 'waiting' || item.status === 'next');
 
   // Available Doctors Count
-  const availableDoctorsCount = doctors.filter(d => d.status === 'available').length;
+  const availableDoctorsCount = doctors.filter(d => d.status === 'Available').length;
 
   const sidebarNavItems = [
     { id: 'dashboard', label: t('dashboard', 'Dashboard'), icon: LayoutDashboard },
@@ -772,7 +772,7 @@ export const AdminDashboard: React.FC = () => {
                               ? 'bg-emerald-100 text-emerald-800'
                               : apt.status === 'cancelled'
                               ? 'bg-rose-100 text-rose-800'
-                              : apt.status === 'in-progress'
+                              : apt.status === 'ongoing'
                               ? 'bg-teal-100 text-teal-800'
                               : 'bg-slate-100 text-slate-700'
                           }`}>
@@ -1092,9 +1092,9 @@ export const AdminDashboard: React.FC = () => {
             {/* Doctor Cards Grid with Real-time Status Switcher */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {doctors.map((doc) => {
-                const isAvailable = doc.status === 'available';
-                const isConsulting = doc.status === 'in-consultation';
-                const isOnBreak = doc.status === 'on-break';
+                const isAvailable = doc.status === 'Available';
+                const isConsulting = doc.status === 'In Consultation';
+                const isOnBreak = doc.status === 'On Break';
 
                 return (
                   <div
@@ -1147,9 +1147,9 @@ export const AdminDashboard: React.FC = () => {
                       <div className="grid grid-cols-3 gap-1 text-[11px] font-bold">
                         <button
                           type="button"
-                          onClick={() => handleDoctorStatusChange(doc._id, 'available')}
+                          onClick={() => handleDoctorStatusChange(doc._id, 'Available')}
                           className={`py-1.5 px-2 rounded-lg text-center transition-all ${
-                            doc.status === 'available'
+                            doc.status === 'Available'
                               ? 'bg-emerald-600 text-white shadow-2xs'
                               : 'bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700'
                           }`}
@@ -1158,9 +1158,9 @@ export const AdminDashboard: React.FC = () => {
                         </button>
                         <button
                           type="button"
-                          onClick={() => handleDoctorStatusChange(doc._id, 'in-consultation')}
+                          onClick={() => handleDoctorStatusChange(doc._id, 'In Consultation')}
                           className={`py-1.5 px-2 rounded-lg text-center transition-all ${
-                            doc.status === 'in-consultation'
+                            doc.status === 'In Consultation'
                               ? 'bg-blue-600 text-white shadow-2xs'
                               : 'bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-700'
                           }`}
@@ -1169,9 +1169,9 @@ export const AdminDashboard: React.FC = () => {
                         </button>
                         <button
                           type="button"
-                          onClick={() => handleDoctorStatusChange(doc._id, 'on-break')}
+                          onClick={() => handleDoctorStatusChange(doc._id, 'On Break')}
                           className={`py-1.5 px-2 rounded-lg text-center transition-all ${
-                            doc.status === 'on-break'
+                            doc.status === 'On Break'
                               ? 'bg-amber-600 text-white shadow-2xs'
                               : 'bg-slate-100 text-slate-700 hover:bg-amber-50 hover:text-amber-700'
                           }`}
